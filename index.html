@@ -4,76 +4,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
     <title>Chocolate</title>
 </head>
 
 <body>
+    <div class="wrapper">
 
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Recepies</a>
-            <a href="#">History</a>
-            <a href="#">Contact</a>
+        <button class="burger"></button>
+
+        <nav class="navbar">
+            <ul>
+                <li><a class="menu-link" href="/index.html">Home</a></li>
+                <li><a class="menu-link" href="#">Recepies</a></li>
+                <li><a class="menu-link" href="#">History</a></li>
+                <li><a class="menu-link" href="#">Contact</a></li>
+            </ul>
         </nav>
-        <section>
-            <img src="/img/chocolate Logo.svg" alt="logo">
-            <img src="/img/Burger.svg" alt="menu">
-        </section>
-        <section class="hero">
-            <h1>Chocolate cravings?</h1>
-        </section>
-    </header>
 
-    <main>
-        <section>
-            <article>
+        <header>
+            <section class="hero-img">
+                <img class="logo" src="/img/chocolate Logo.svg" alt="logo">
+                <article class="hero-text">
+                    <h1>Chocolate cravings?</h1>
+                </article>
+            </section>
+        </header>
+
+        <main>
+
+            <article class="recepies-link">
                 <h2>Recepies</h2>
                 <p>If you have a huge craving for chocolate you must check out our delicious recepies right now.</p>
-                <button>Give me some chocolate!</button>
+                <button class="button">Give me some chocolate!</button>
             </article>
-            <figure>
+
+            <figure class="cookies">
                 <img src="/img/cookie.jpg" alt="cookie">
             </figure>
-        </section>
 
-        <section>
-            <article>
+            <article class="history-link">
                 <h2>History</h2>
                 <p>Chocolate, a delicious cure for a bad day. What could be more interesting than the history of
                     chocolate?</p>
-                <button>Give me some history!</button>
+                <button class="button">Give me some history!</button>
             </article>
-            <figure>
+
+            <figure class="cake">
                 <img src="/img/newspaper.jpg" alt="chocolate cake">
             </figure>
-        </section>
-    </main>
 
-    <footer>
-        <aside>
-            <img src="/img/up-arrow 1.svg" alt="up-arrow">
-            <p>Back to top</p>
-        </aside>
-        <aside>
-            <p>Wanna follow?</p>
-            <img src="/img/pinterest-sign.svg" alt="pinterest">
-            <img src="/img/instagram-logo.svg" alt="instagram">
-            <img src="/img/snapchat.svg" alt="snapchat">
-            <img src="/img/facebook.svg" alt="facebook">
-            <img src="/img/linkedin.svg" alt="linkedin">
-        </aside>
-        <hr>
-        <p>
-            Icons made by:
-            <a href="https://www.flaticon.com/authors/pixel-perfect">Pixel perfect,</a>
-            <a href="http://fontawesome.io/">Dave Gandy, </a>
-            <a href="https://www.flaticon.com/authors/freepik">Freepik</a>
-            <a href="https://www.instagram.com/tigerlotuz/">& TigerLotuz</a>
-        </p>
-    </footer>
+        </main>
 
+        <footer>
+            <aside class="bottom-top">
+                <img src="/img/up-arrow 1.svg" alt="up-arrow">
+                <p>Back to top</p>
+            </aside>
+
+            <aside class="bottom-icons">
+                <p id="follow">Wanna follow?</p>
+                <img src="/img/pinterest-sign.svg" alt="pinterest">
+                <img src="/img/instagram-logo.svg" alt="instagram">
+                <img src="/img/snapchat.svg" alt="snapchat">
+                <img src="/img/facebook.svg" alt="facebook">
+                <img src="/img/linkedin.svg" alt="linkedin">
+            </aside>
+
+            <aside>
+                <hr>
+                <p class="icon-text">
+                    Icons made by:
+                    <a href="https://www.flaticon.com/authors/pixel-perfect">Pixel perfect,</a>
+                    <a href="http://fontawesome.io/">Dave Gandy, </a>
+                    <a href="https://www.flaticon.com/authors/freepik">Freepik</a>
+                    <a href="https://www.instagram.com/tigerlotuz/">& TigerLotuz</a>
+                </p>
+            </aside>
+        </footer>
+    </div>
+    <script>
+        // Jag kallar på navbar och burger //
+        var navbar = document.querySelector(".navbar")
+        var burger = document.querySelector(".burger")
+
+        // Jag kallar på en funktion som växlar mellan stängd och öppen meny //
+        function toggleHamburger() {
+            navbar.classList.toggle("open-nav")
+            burger.classList.toggle("close-burger")
+        }
+        // Jag lägger till en eventlistener för att det ska hända nåt när man klickar på menyn //
+        burger.addEventListener("click", toggleHamburger)
+       
+       // Jag kallar på alla länkar //
+        var menuLinks = document.querySelectorAll(".menuLink")
+        
+         // Jag lägger till en eventlistener för att det ska hända nåt när man klickar på länkarna //
+        menuLinks.forEach(
+            function (menuLink) {
+                menuLink.addEventListener("click", toggleHamburger)
+            }
+        )
+
+    </script>
 </body>
 
 </html>

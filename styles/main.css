@@ -1,0 +1,216 @@
+
+/* variables */
+:root {
+    --basic-color: #5EB0B8;
+    --second-color: #6b462c;
+    --third-color: #21656B;
+    --white-color: #fcfcfc;
+}
+
+/* reset */
+li {
+    list-style-type: none;
+}
+body, figure, h1, h2, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+}
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+/* fonts */
+h1, h2, #follow {
+    font-family: 'Cookie', cursive;
+    font-style: normal;
+    font-weight: normal;
+}
+* p, a {
+    font-family: 'Roboto', sans-serif;
+    
+}
+h1 {
+    font-size: 4.5em;
+    line-height: 65%;
+    letter-spacing: .03em;
+    color: var(--basic-color);
+    text-shadow: 0px 2px 2px var(--second-color);
+}
+h2 {
+    font-size: 2.5em;
+}
+p {
+    font-size: 1em;
+}
+
+/* wrapper and grid*/
+.wrapper {
+    background-color: var(--basic-color);
+    max-width: 1440px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: var(--white-color);
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "recepies-link"
+    "cookies"
+    "history-link"
+    "cake"
+    "footer" ;
+}
+header {
+    grid-area: header;
+}
+.recepies-link {
+    grid-area: recepies-link;
+}
+.cookies {
+    grid-area: cookies;
+}
+.history-link {
+    grid-area: history-link;
+}
+.cake {
+    grid-area: cake;
+}
+footer {
+    grid-area: footer;
+}
+
+/* menu */
+.burger {
+    width: 2.5rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 1000;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    background-image: url(/img/Burger.svg);
+    background-size: 100%;
+    border: none;
+    cursor: pointer;
+}
+.close-burger {
+    background-image: url(/img/kross.svg);
+}
+.navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(33, 101, 107, 0.8);
+    transform: translateY(-100%);
+    transition: transform 0.2s ease-in-out;
+}
+.navbar > ul > li > a {
+    font-size: 2rem;
+    line-height: 4rem;
+}
+.navbar > ul > li > a:hover {
+    color: var(--basic-color);
+}
+.open-nav {
+    transform: translateY(0);
+}
+
+/* buttons */
+.button {
+    height: 2.5rem;
+    width: 15rem;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+.button:hover {
+    opacity: 50%;
+}
+main > .recepies-link > button {
+    background-color: var(--second-color);
+}
+main > .history-link > button {
+    background-color: var(--basic-color);
+}
+
+/* base styles */
+header > .hero-img > .logo {
+    position: fixed;
+    top: .2rem;
+    left: .1rem;
+    z-index: 1000;
+}
+.hero-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/img/Hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    min-height: 600px;
+    position: relative;
+}
+.hero-text {  
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main > article {
+    max-width: 100%;
+    min-height: 337px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3.5rem;
+}  
+main > article > p {
+    margin: 1.5rem 0;
+} 
+main > figure {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > figure > img {
+    max-width: 100%;
+    min-height: 523px;
+    object-fit: cover;
+    object-position: center;
+}
+main > .history-link {
+    background-color: var(--second-color);
+}
+footer{
+    width: 100%;
+    min-height: 414px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer > .bottom-top > p {
+    margin-top: -.4rem;
+    letter-spacing: -.05rem;
+}
+footer > .bottom-icons {
+    padding-top: 12rem;
+    font-size: 1.6rem;
+}
+#follow {
+    padding-bottom: .5rem;
+}
+footer > aside > hr {
+    width: 90%;
+}
+footer > aside > .icon-text {
+    font-size: .7rem;
+    padding: 1rem;
+}
