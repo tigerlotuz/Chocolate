@@ -28,7 +28,6 @@ h1, h2, #follow {
 }
 * p, a {
     font-family: 'Roboto', sans-serif;
-    
     color: var(--white-color);
 }
 h1 {
