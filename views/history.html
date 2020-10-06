@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">  
+    <title>History</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <button class="burger"></button>
+
+        <nav class="navbar">
+            <ul>
+                <li><a class="menu-link" href="/index.html">Home</a></li>
+                <li><a class="menu-link" href="/views/recepies.html">Recepies</a></li>
+                <li><a class="menu-link" href="/views/history.html">History</a></li>
+                <li><a class="menu-link" href="/views/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <section class="hero-img">
+                <img class="logo" src="/img/chocolate Logo.svg" alt="logo">
+                <article class="hero-text">
+                    <h1>Chocolate cravings?</h1>
+                </article>
+            </section>
+        </header>
+
+        <main class="main-history">
+           <article class="history">
+               <h2>The history of chocolate</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aspernatur sapiente, dolorem dolore sint dolor quas quaerat ratione sunt, reprehenderit odio culpa? Autem quam perferendis repellat. Tempore nulla aperiam inventore!</p>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error laboriosam libero eaque pariatur perspiciatis asperiores iure ipsam. Asperiores dolorem, nobis ipsum incidunt dolores ipsam optio expedita eveniet, ullam voluptatem culpa.</p>
+               <figure><img src="/img/history.jpg" alt="chocolate mousse"></figure>
+           </article>
+        </main>
+
+        <footer>
+            <aside class="bottom-top">
+                <a href="/index.html">
+                <img src="/img/up-arrow 1.svg" alt="up-arrow">
+                <p>Back to top</p>
+            </a>
+            </aside>
+
+            <aside class="bottom-icons">
+                <p id="follow">Wanna follow?</p>
+                <a href="https://www.pinterest.se/tigerlotuz" target="_blank">
+                    <img src="/img/pinterest-sign.svg" alt="pinterest">
+                </a>
+                <a href="https://www.instagram.com/tigerlotuz/?hl=sv" target="_blank">
+                    <img src="/img/instagram-logo.svg" alt="instagram">
+                </a>
+                <a href="https://www.snapchat.com/l/sv-se/" target="_blank">
+                    <img src="/img/snapchat.svg" alt="snapchat">
+                </a>
+                <a href="https://www.facebook.com/tigerlotuz" target="_blank">
+                    <img src="/img/facebook.svg" alt="facebook">
+                </a>
+                <a href="https://www.linkedin.com/in/tigerlotuz/" target="_blank">
+                    <img src="/img/linkedin.svg" alt="linkedin">
+                </a>
+            </aside>
+
+            <aside>
+                <hr>
+                <p class="icon-text">
+                    Icons made by:
+                    <a href="https://www.flaticon.com/authors/pixel-perfect">Pixel perfect,</a>
+                    <a href="http://fontawesome.io/">Dave Gandy, </a>
+                    <a href="https://www.flaticon.com/authors/freepik">Freepik</a>
+                    <a href="https://www.instagram.com/tigerlotuz/">& TigerLotuz</a>
+                </p>
+            </aside>
+        </footer>
+    </div>
+    <script>
+        // Jag kallar på navbar och burger //
+        var navbar = document.querySelector(".navbar")
+        var burger = document.querySelector(".burger")
+
+        // Jag kallar på en funktion som växlar mellan stängd och öppen meny //
+        function toggleHamburger() {
+            navbar.classList.toggle("open-nav")
+            burger.classList.toggle("close-burger")
+        }
+        // Jag lägger till en eventlistener för att det ska hända nåt när man klickar på menyn //
+        burger.addEventListener("click", toggleHamburger)
+       
+       // Jag kallar på alla länkar //
+        var menuLinks = document.querySelectorAll(".menuLink")
+        
+         // Jag lägger till en eventlistener för att det ska hända nåt när man klickar på länkarna //
+        menuLinks.forEach(
+            function (menuLink) {
+                menuLink.addEventListener("click", toggleHamburger)
+            }
+        )
+
+    </script>
+</body>
+
+</html>
