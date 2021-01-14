@@ -73,7 +73,7 @@ footer {
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 1000;
+    z-index: 11000;
     top: 1rem;
     right: 1rem;
     background-color: transparent;
@@ -300,6 +300,7 @@ footer > aside > hr {
 /* desktop*/
 @media screen and (min-width: 768px) {
     .wrapper {
+        font-size: 30px;
         grid-template-areas:
     "header header header"
     "main main main"
