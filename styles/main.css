@@ -2,7 +2,7 @@
 /* variables */
 :root {
     --basic-color: #5EB0B8;
-    --second-color: #6b462c;
+    --second-color: #69584b;
     --third-color: #21656B;
     --white-color: #fcfcfc;
 }
@@ -21,7 +21,7 @@ a:link, a:visited, a:active {
 }
 
 /* fonts */
-h1, h2, #follow {
+h1, h2, #tigerlotuz {
     font-family: 'Cookie', cursive;
     font-style: normal;
     font-weight: normal;
@@ -41,12 +41,12 @@ h2 {
     font-size: 2.5em;
 }
 p {
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 /* wrapper and grid*/
 .wrapper {
-    background-color: var(--basic-color);
+    background-color: var(--white-color);
     max-width: 1440px;
     margin: 0 auto;
     font-size: 20px;
@@ -69,15 +69,27 @@ footer {
 }
 
 /* menu */
+.logo-burger {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.logo-cupcake {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
 .burger {
+    margin-top: 1rem;
+    margin-right: 1rem;;
     width: 2rem;
     height: 2rem;
     position: fixed;
     z-index: 11000;
-    top: 1rem;
-    right: 1rem;
+    /*top: 1rem;
+    right: 1rem;*/
     background-color: transparent;
-    background-image: url(/img/Burger.svg);
+    background-image: url(../img/Burger.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -86,7 +98,7 @@ footer {
     cursor: pointer;
 }
 .close-burger {
-    background-image: url(/img/kross.svg);
+    background-image: url(../img/kross.svg);
 }
 .navbar {
     width: 100%;
@@ -119,25 +131,25 @@ footer {
     width: 15rem;
     border-radius: 50px;
     border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);
     color: var(--white-color);
-    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
 }
-.button:hover {
-    color: hotpink;
+.w3-button:hover {
+    background-color: rgb(223, 182, 202) !important;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.9);
 }
-.recepies-link > button {
-    background-color: var(--second-color);
-}
-.history-link > button {
-    background-color: var(--basic-color);
+.history-link > a, .recepies-link > a {
+    background-color: var(--third-color);
 }
 
 /* base styles */
 .logo {
+    align-self: flex-start;
     position: fixed;
-    top: .2rem;
-    left: .1rem;
+    /*top: .2rem;
+    left: .1rem;*/
     z-index: 1000;
     -webkit-transition: transform 5s;
     -moz-transition: transform 5s;
@@ -153,7 +165,7 @@ footer {
     transform: rotate(360deg);
 }
 .hero-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/img/Hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -174,7 +186,7 @@ main > article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 3.5rem;
+    padding: 0 10rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }  
 main > article > p {
@@ -193,8 +205,16 @@ main > figure > img {
     object-position: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+main > article:hover, main > figure:hover {
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.9);
+}
 .history-link {
     background-color: var(--second-color);
+    
+}
+.recepies-link {
+    background-color: var(--basic-color);
+    
 }
 footer {
     width: 100%;
@@ -203,17 +223,20 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
 }
 .bottom-top p {
     margin-top: -.6rem;
     letter-spacing: -.05rem;
 }
 .bottom-icons {
-    padding-top: 12rem;
+    padding-top: 20rem;
     font-size: 1.6rem;
 }
-#follow {
-    padding-bottom: .5rem;
+#tigerlotuz {
+    font-size: 1.5rem;
 }
 footer > aside > hr {
     width: 90%;

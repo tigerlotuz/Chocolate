@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/main.css">
     <title>Chocolate</title>
 </head>
@@ -12,20 +15,26 @@
 <body>
     <div class="wrapper">
 
-        <button class="burger"></button>
-
-        <nav class="navbar">
-            <ul>
-                <li><a class="menu-link" href="./index.html">Home</a></li>
-                <li><a class="menu-link" href="./views/recepies.html">Recepies</a></li>
-                <li><a class="menu-link" href="./views/history.html">History</a></li>
-                <li><a class="menu-link" href="./views/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
         <header>
-            <section class="hero-img">
+            <article class="logo-cupcake">
                 <img class="logo" src="./img/chocolate Logo.svg" alt="logo">
+            </article>
+
+            <section class="hero-img">
+
+                <article class="logo-burger">
+                    <button class="burger"></button>
+                </article>
+
+                <nav class="navbar">
+                    <ul>
+                        <li><a class="menu-link" href="./index.html">Home</a></li>
+                        <li><a class="menu-link" href="./views/recepies.html">Recepies</a></li>
+                        <li><a class="menu-link" href="./views/history.html">History</a></li>
+                        <li><a class="menu-link" href="./views/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
                 <article class="hero-text">
                     <h1>Chocolate cravings?</h1>
                 </article>
@@ -36,7 +45,7 @@
             <article class="recepies-link">
                 <h2>Recepies</h2>
                 <p>If you have a huge craving for chocolate you must check out our delicious recepies right now.</p>
-                <button class="button">Give me some chocolate!</button>
+                <a class="w3-button button" href="./views/recepies.html">Recepies</a>
             </article>
 
             <figure class="cookies">
@@ -47,7 +56,7 @@
                 <h2>History</h2>
                 <p>Chocolate, a delicious cure for a bad day. What could be more interesting than the history of
                     chocolate?</p>
-                <button class="button">Give me some history!</button>
+                <a class="w3-button button" href="./views/history.html">Read more</a>
             </article>
 
             <figure class="cake">
@@ -58,40 +67,34 @@
         <footer>
             <aside class="bottom-top">
                 <a href="./index.html">
-                <img src="./img/up-arrow 1.svg" alt="up-arrow">
-                <p>Back to top</p>
-            </a>
+                    <i class="fas fa-sort-up"></i>
+                    <p>Back to top</p>
+                </a>
             </aside>
 
             <aside class="bottom-icons">
-                <p id="follow">Wanna follow?</p>
                 <a href="https://www.pinterest.se/tigerlotuz" target="_blank">
-                    <img src="./img/pinterest-sign.svg" alt="pinterest">
+                    <i class="fab fa-pinterest"></i>
                 </a>
                 <a href="https://www.instagram.com/tigerlotuz/?hl=sv" target="_blank">
-                    <img src="./img/instagram-logo.svg" alt="instagram">
+                    <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://www.snapchat.com/l/sv-se/" target="_blank">
-                    <img src="./img/snapchat.svg" alt="snapchat">
+                    <i class="fab fa-snapchat"></i>
                 </a>
                 <a href="https://www.facebook.com/tigerlotuz" target="_blank">
-                    <img src="./img/facebook.svg" alt="facebook">
+                    <i class="fab fa-facebook"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/tigerlotuz/" target="_blank">
-                    <img src="./img/linkedin.svg" alt="linkedin">
+                    <i class="fab fa-linkedin"></i>
                 </a>
             </aside>
 
             <aside>
                 <hr>
-                <p class="icon-text">
-                    Icons made by:
-                    <a href="https://www.flaticon.com/authors/pixel-perfect">Pixel perfect,</a>
-                    <a href="http://fontawesome.io/">Dave Gandy, </a>
-                    <a href="https://www.flaticon.com/authors/freepik">Freepik</a>
-                    <a href="https://www.instagram.com/tigerlotuz/">& TigerLotuz</a>
-                </p>
+                <p id="tigerlotuz">Tigerlotuz</p>
             </aside>
+
         </footer>
     </div>
     <script>
@@ -106,11 +109,11 @@
         }
         // Jag lägger till en eventlistener för att det ska hända nåt när man klickar på menyn //
         burger.addEventListener("click", toggleHamburger)
-       
-       // Jag kallar på alla länkar //
+
+        // Jag kallar på alla länkar //
         var menuLinks = document.querySelectorAll(".menuLink")
-        
-         // Jag lägger till en eventlistener för att det ska hända nåt när man klickar på länkarna //
+
+        // Jag lägger till en eventlistener för att det ska hända nåt när man klickar på länkarna //
         menuLinks.forEach(
             function (menuLink) {
                 menuLink.addEventListener("click", toggleHamburger)
