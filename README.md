@@ -1,1 +1,2 @@
-This is my second schoolproject in HTML and CSS.
+#Project Chocolate
+This is my second school project in HTML and CSS.
